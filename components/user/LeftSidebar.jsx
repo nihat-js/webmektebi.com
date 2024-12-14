@@ -10,6 +10,8 @@ const Sidebar = () => {
   const [activeSubCategory, setActiveSubCategory] = useState(null);
   const [expandedCategory, setExpandedCategory] = useState(null);
 
+  const [sidebarState, setSidebarState] = useState(true);
+
   // Data for categories, subcategories, and lessons
 
 
@@ -32,11 +34,22 @@ const Sidebar = () => {
     setActiveCategory(null); // Go back to categories
   };
 
+  function toggle() {
+    setSidebarState(!sidebarState);
+  }
+
   return (
-    <div className="flex">
+    <div className=''>
       {/* Left Sidebar */}
-      <div className="w-64 bg-white/80 h-screen p-4  py-4 shadow backdrop-blur fixed top-0 ">
+      <div className={`w-64 bg-white/80 h-screen p-4  py-4 shadow backdrop-blur fixed top-0 
+        ${sidebarState ? 'left-0' : '-left-64'} transition-all duration-300 `}>
         <div className="text-xl font-bold mb-4">Web Mektebi</div>
+
+        <div className='absolute bottom-4 right-4 text-2xl
+        cursor-pointer p-2 bg-gray-800 text-white rounded-full w-10 h-10 flex justify-center items-center
+        ' onClick={toggle} >
+          &times;
+        </div>
 
         {/* Top Level Menu - Categories (Programming Languages) */}
         {!activeCategory && (
@@ -129,6 +142,9 @@ const Sidebar = () => {
           </div>
         )}
       </div>
+
+
+
 
 
     </div>

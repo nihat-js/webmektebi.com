@@ -40,7 +40,7 @@ const CodeBlock = ({ language, code, fileName }) => {
       </div>
 
       {/* Code Block with Syntax Highlighting */}
-      <SyntaxHighlighter language={language} style={tomorrowNightBright}>
+      <SyntaxHighlighter language={language} >
         {code}
       </SyntaxHighlighter>
 
