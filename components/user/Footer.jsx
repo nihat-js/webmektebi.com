@@ -1,4 +1,4 @@
-// components/Footer.js
+"use client"
 
 const Footer = () => {
   return (
