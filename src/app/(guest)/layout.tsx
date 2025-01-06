@@ -1,9 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import Sidebar from "@/components/user/LeftSidebar";
-import Navbar from "@/components/user/Navbar";
-import Footer from "@/components/user/Footer";
-
+// import Sidebar from "@/src/components/user/LeftSidebar";
+import { LeftSidebar } from "@/components/user/LeftSidebar";
+import { Footer } from "@/components/user/Footer";
+import { Navbar } from "@/components/user/Navbar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,13 +24,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-slate-100">
         <div>
-          <Sidebar />
+          <div className="absolute">
+            <LeftSidebar />
+          </div>
           <div className="container mx-auto" style={{ maxWidth: "800px" }}>
             <Navbar />
+            {/* <Navbar /> */}
             <main>
               {children}
             </main>
             <Footer />
+            {/* <Footer /> */}
           </div>
         </div>
       </body>

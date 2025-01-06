@@ -1,4 +1,4 @@
-import LeftSidebar from "@/components/admin/LeftSidebar";
+import LeftSidebar from "@/src/components/admin/LeftSidebar";
 import "../globals.css"
 // export const metadata = {
 //   title: 'Next.js',

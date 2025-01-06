@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { docco, tomorrowNightBright } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-// Optional: Import PrismJS themes
 import 'prismjs/themes/prism.css'; 
 
 const CodeBlock = ({ language, code, fileName }) => {
